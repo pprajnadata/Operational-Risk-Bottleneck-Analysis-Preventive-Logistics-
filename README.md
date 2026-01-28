@@ -26,11 +26,11 @@ SQL Output Screenshot:
 ---
 
 ## 🧪 Phase 2: Root Cause Analysis (Python Statistical Modeling)
-Once the "problem vendors" were identified, I used Python to find the mathematical root cause. I hypothesized that staffing levels relative to workload were the primary driver of delays.
+Once the "problem vendors" were identified, I used Python to find the mathematical root cause. I hypothesized that staffing levels were the primary driver.
 
-Technical Execution: I performed a Correlation Matrix analysis using Seaborn and Pandas to determine the relationship between Staff_Level, Volume_Handled, and the Overdue_Flag.
+**Technical Execution:** I performed a Correlation Matrix analysis using Seaborn and Pandas to determine the relationship between Staffing and Delays.
 
-Python
+```python
 # Calculating the correlation to prove the staffing bottleneck
 correlation_matrix = df[['Staff_Level', 'Volume_Handled', 'Overdue_Flag']].corr()
 
@@ -39,7 +39,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='RdYlGn')
 plt.title('Root Cause Analysis: Staffing vs. Overdue Correlation')
 
 Statistical Visualization:
-![Alt Text] (correlation_heatmap.png)
+![Alt Text](correlation_heatmap.png)
 
 Key Insight: The analysis revealed a strong negative correlation (-0.65) between staffing and delays. Specifically, when Volume > 400 and Staff < 5, the system reaches a breaking point where failure is almost certain.
 
@@ -48,7 +48,8 @@ Key Insight: The analysis revealed a strong negative correlation (-0.65) between
 ## 🚀 Phase 3: The "24-Hour" Preventive Flag (Business Outcome) ##
 The final step was creating a "Predictive Flag." This script scans the upcoming schedule and labels each order by risk level before it becomes overdue. This allows management to reallocate staff to "Critical" segments in advance.
 
-![Alt Text] (preventive_flag.jpg)
+![Alt Text](preventive_flag.jpg)
+---
 **Final Predictive Report Preview:**
 🛠️ How to Run This Project
 Clone this repository.
