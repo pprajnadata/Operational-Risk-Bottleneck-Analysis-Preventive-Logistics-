@@ -20,11 +20,12 @@ GROUP BY Vendor_Type
 ORDER BY failure_rate_pct DESC
 ```
 ---
-```
-![Alt Text] (failure_rates_sql.png)
-
 SQL Output Screenshot:
-## **🧪 Phase 2: Root Cause Analysis (Python Statistical Modeling)**
+
+![Alt Text](failure_rates_sql.png)
+---
+
+**🧪 Phase 2: Root Cause Analysis (Python Statistical Modeling)**
 Once the "problem vendors" were identified, I used Python to find the mathematical root cause. I hypothesized that staffing levels relative to workload were the primary driver of delays.
 
 Technical Execution: I performed a Correlation Matrix analysis using Seaborn and Pandas to determine the relationship between Staff_Level, Volume_Handled, and the Overdue_Flag.
@@ -36,23 +37,27 @@ correlation_matrix = df[['Staff_Level', 'Volume_Handled', 'Overdue_Flag']].corr(
 # Visualizing the relationship
 sns.heatmap(correlation_matrix, annot=True, cmap='RdYlGn')
 plt.title('Root Cause Analysis: Staffing vs. Overdue Correlation')
+
 Statistical Visualization:
+![Alt Text](correlation_heatmap.png)
+
 Key Insight: The analysis revealed a strong negative correlation (-0.65) between staffing and delays. Specifically, when Volume > 400 and Staff < 5, the system reaches a breaking point where failure is almost certain.
 
-## **🚀 Phase 3: The "24-Hour" Preventive Flag (Business Outcome)**
+---
+
+**🚀 Phase 3: The "24-Hour" Preventive Flag (Business Outcome)**
 The final step was creating a "Predictive Flag." This script scans the upcoming schedule and labels each order by risk level before it becomes overdue. This allows management to reallocate staff to "Critical" segments in advance.
 
 **Final Predictive Report Preview:**
 🛠️ How to Run This Project
 Clone this repository.
 
-Ensure you have the operational_overdue_data.csv file in the directory.
 
 Run the Python script: python operational_analysis.py.
 
 Open final_operational_risk_report.csv to see the orders flagged for preventive intervention.
 
-Author: [Your Name]
+Author: Prajna Priyadarshini
 
 Objective: Data Analytics | Operations Research | Risk Mitigation
 
