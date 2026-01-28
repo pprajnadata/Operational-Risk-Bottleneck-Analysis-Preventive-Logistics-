@@ -19,3 +19,6 @@ FROM operations
 GROUP BY Vendor_Type
 ORDER BY failure_rate_pct DESC
 ---
+![Alt Text] <img width="859" height="707" alt="failure_rates_sql" src="https://github.com/user-attachments/assets/a5c7a676-aa03-48d6-ae9d-eb8dc34bce72" />
+
+
