@@ -22,7 +22,7 @@ ORDER BY failure_rate_pct DESC
 ---
 SQL Output Screenshot:
 
-![Alt Text](failure_rates_sql.png)
+![Alt Text](images/failure_rates_sql.png)
 ---
 
 ## 🧪 Phase 2: Root Cause Analysis (Python Statistical Modeling)
@@ -40,7 +40,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='RdYlGn')
 plt.title('Root Cause Analysis: Staffing vs. Overdue Correlation')
 ```
 Statistical Visualization:
-![Alt Text](correlation_heatmap.png)
+![Alt Text](images/correlation_heatmap.png)
 
 Key Insight: The analysis revealed a strong negative correlation (-0.65) between staffing and delays. Specifically, when Volume > 400 and Staff < 5, the system reaches a breaking point where failure is almost certain.
 
@@ -49,7 +49,7 @@ Key Insight: The analysis revealed a strong negative correlation (-0.65) between
 ## 🚀 Phase 3: The "24-Hour" Preventive Flag (Business Outcome) ##
 The final step was creating a "Predictive Flag." This script scans the upcoming schedule and labels each order by risk level before it becomes overdue. This allows management to reallocate staff to "Critical" segments in advance.
 
-![Alt Text](preventive_flag.jpg)
+![Alt Text](images/preventive_flag.jpg)
 ---
 **Final Predictive Report Preview:**
 🛠️ How to Run This Project
