@@ -21,7 +21,7 @@ ORDER BY failure_rate_pct DESC
 ```
 ---
 ```
-![Alt Text] failure_rates_sql.png
+![Alt Text] (failure_rates_sql.png)
 
 SQL Output Screenshot:
 ## **🧪 Phase 2: Root Cause Analysis (Python Statistical Modeling)**
