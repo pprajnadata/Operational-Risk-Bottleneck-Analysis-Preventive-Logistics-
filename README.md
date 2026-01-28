@@ -49,7 +49,7 @@ Key Insight: The analysis revealed a strong negative correlation (-0.65) between
 ## 🚀 Phase 3: The "24-Hour" Preventive Flag (Business Outcome) ##
 The final step was creating a "Predictive Flag." This script scans the upcoming schedule and labels each order by risk level before it becomes overdue. This allows management to reallocate staff to "Critical" segments in advance.
 
-![Alt Text](Images/preventive_flag.jpg)
+![Alt Text](Images/preventive_flag.png)
 ---
 **Final Predictive Report Preview:**
 🛠️ How to Run This Project
