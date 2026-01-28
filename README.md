@@ -19,7 +19,7 @@ FROM operations
 GROUP BY Vendor_Type
 ORDER BY failure_rate_pct DESC
 
-🧪 Phase 2: Root Cause Analysis (Python)
+## 🧪 Phase 2: Root Cause Analysis (Python)
 Using Python, I performed a correlation study. The data proved that delays weren't random; they were highly correlated with a specific Volume-to-Staff ratio.
 
 Finding: A negative correlation between Staff_Level and Overdue_Flag confirmed that staffing gaps during peak hours (Volume > 400) were the primary bottleneck.
