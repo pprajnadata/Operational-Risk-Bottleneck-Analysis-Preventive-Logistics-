@@ -33,11 +33,12 @@ Once the "problem vendors" were identified, I used Python to find the mathematic
 ```python
 # Calculating the correlation to prove the staffing bottleneck
 correlation_matrix = df[['Staff_Level', 'Volume_Handled', 'Overdue_Flag']].corr()
-
+```
+```
 # Visualizing the relationship
 sns.heatmap(correlation_matrix, annot=True, cmap='RdYlGn')
 plt.title('Root Cause Analysis: Staffing vs. Overdue Correlation')
-
+```
 Statistical Visualization:
 ![Alt Text](correlation_heatmap.png)
 
