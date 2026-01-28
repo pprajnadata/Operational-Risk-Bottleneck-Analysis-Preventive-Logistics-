@@ -1,4 +1,3 @@
-# Operational-Risk-Bottleneck-Analysis-Preventive-Logistics
 # Operational Risk & Bottleneck Analysis (Preventive Logistics)
 
 ## 📌 Project Overview
