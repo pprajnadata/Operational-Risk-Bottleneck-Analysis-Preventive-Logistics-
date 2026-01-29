@@ -56,7 +56,8 @@ The final step was creating a "Predictive Flag." This script scans the upcoming 
 Clone this repository.
 
 
-Run the Python script: python operational_analysis.py.
+Run the Python script:
+ pprajnadata/Operational-Risk-Bottleneck-Analysis-Preventive-Logistics-/Files/operational_analysis py.ipynb
 
 Open final_operational_risk_report.csv to see the orders flagged for preventive intervention.
 
